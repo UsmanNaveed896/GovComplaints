@@ -68,6 +68,7 @@ const MonthlyComplaintsChart = () => {
             }}
             tick={{ fontSize: 10 }}
             ticks={[0, 7, 14, 21, 28]}
+            axisLine={false}
           />
           <Tooltip 
             content={<CustomTooltip />}

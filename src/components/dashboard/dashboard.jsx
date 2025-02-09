@@ -9,7 +9,7 @@ import Img5 from "../../assets/6.png";
 import Img6 from "../../assets/7.png";
 import Img7 from "../../assets/8.png";
 
-import { FaRegBell, FaWhatsapp } from "react-icons/fa";
+import { FaCaretDown, FaRegBell, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import TickPlacementBars from "../chart/chart";
 import StatsCard from "../statsCard/statsCard";
@@ -34,13 +34,16 @@ const Dashboard = () => {
           </p>
         </div>
 
-        <Box className="space-x-2">
-          <button className="bg-[#004512] text-white px-4 py-2 text-sm  font-semibold rounded">
-            Actions
+        <Box className="flex gap-2">
+          <button className="bg-[#004512] flex items-center gap-3 text-white px-4 py-2 text-sm  font-semibold rounded">
+            Actions <FaCaretDown />
           </button>
+          <div>
           <button className="bg-[#004512] text-white px-4 py-2 text-sm rounded font-semibold">
             Search Complaint
           </button>
+          </div>
+         
         </Box>
       </Box>
       <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-1 mb-8">

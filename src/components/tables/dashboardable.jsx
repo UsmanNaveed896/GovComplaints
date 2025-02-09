@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Button, MenuItem, Select, TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { FaCaretDown } from "react-icons/fa";
 const DashboardTable = () => {
   const [pageSize, setPageSize] = useState(10);
 
@@ -23,6 +24,19 @@ const DashboardTable = () => {
 
   return (
     <div className="py-4 px-4 bg-white rounded">
+      <div className="flex justify-between">
+        <div>
+          <h1 className="mb-4 font-bold text-[18px]">
+            Monthly Complaints' Status
+          </h1>
+         
+        </div>
+        <div>
+          <button className="bg-[#004512] flex items-center gap-3 text-white px-4 py-2 text-sm  font-semibold rounded">
+            Select Value <FaCaretDown />
+          </button>
+        </div>
+      </div>
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center space-x-2">
           <span className="text-sm">Show</span>
@@ -44,8 +58,6 @@ const DashboardTable = () => {
             <span className="text-sm pr-2">Search:</span>
             <input className="border border-gray-400 rounded py-1 px-6" />
           </div>
-
-         
         </div>
       </div>
 
@@ -59,8 +71,6 @@ const DashboardTable = () => {
           noRowsLabel: "No data available in table",
         }}
       />
-
-      
     </div>
   );
 };

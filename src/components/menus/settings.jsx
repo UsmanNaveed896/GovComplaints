@@ -10,6 +10,8 @@ import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
 import { IoLogOutOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import Img from '../../assets/9.png'
+import { FaCaretDown } from "react-icons/fa";
 
 export default function AccountMenu() {
     const navigate=useNavigate();
@@ -24,18 +26,23 @@ export default function AccountMenu() {
   return (
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
+        <Box sx={{display:'flex',gap:1,alignItems:"center"}}>
+          <img className="h-8 w-8 rounded-full " src={Img} alt="profile" />
+          <Typography sx={{color:"#d9e3dc"}}>Asif Khan</Typography>
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2 }}
+            sx={{ ml: 1 }}
             aria-controls={open ? "account-menu" : undefined}
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+            <FaCaretDown className="text-white" />
           </IconButton>
         </Tooltip>
+        </Box>
+       
       </Box>
       <Menu
         anchorEl={anchorEl}

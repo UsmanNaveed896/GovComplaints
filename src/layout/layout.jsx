@@ -187,7 +187,7 @@ const DashboardLayout = () => {
                   sx={{
                     color: "#ffffffd9",
                     fontSize: "20px",
-                    minWidth: "40px",
+                    minWidth: "32px",
                   }}
                 >
                   {item.icon}
@@ -204,7 +204,7 @@ const DashboardLayout = () => {
                     sx={{
                       color: "#ffffffd9",
                       fontSize: "20px",
-                      minWidth: "30px",
+                      minWidth: "25px",
                     }}
                   >
                     {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
@@ -294,11 +294,12 @@ const DashboardLayout = () => {
               <div className="w-6 h-6 absolute left-3 top-[17px]">
                 <div style={style}></div>
               </div>
-              <select className="bg-[#004512] border-2 text-white px-8 py-2 rounded-full  border-white font-bold">
+              <select className="bg-[#266135] border-2 text-white px-8 py-2 rounded-full  border-white font-bold">
                 <option>Select Department</option>
               </select>
             </Box>
           </Box>
+
          <AccountMenu/>
         </Toolbar>
       </AppBar>
