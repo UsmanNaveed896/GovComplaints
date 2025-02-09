@@ -12,6 +12,8 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import Img from '../../assets/9.png'
 import { FaCaretDown } from "react-icons/fa";
+import { MdFullscreen } from "react-icons/md";
+import { RiFullscreenFill } from "react-icons/ri";
 
 export default function AccountMenu() {
     const navigate=useNavigate();
@@ -27,6 +29,7 @@ export default function AccountMenu() {
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
         <Box sx={{display:'flex',gap:1,alignItems:"center"}}>
+        <RiFullscreenFill className="w-5 h-5 text-[#d9e3dc] mr-5 cursor-pointer hover:text-white"/>
           <img className="h-8 w-8 rounded-full " src={Img} alt="profile" />
           <Typography sx={{color:"#d9e3dc"}}>Asif Khan</Typography>
         <Tooltip title="Account settings">
